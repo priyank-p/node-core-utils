@@ -1,6 +1,11 @@
 # Test against the latest version of this Node.js version
 environment:
   nodejs_version: "8"
+  
+notifications:
+  - provider: GitHubPullRequest
+  - template: "{{#passed}}:white_check_ ..."
+
 
 # Install scripts. (runs after repo cloning)
 install:
